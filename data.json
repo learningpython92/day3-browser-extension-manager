@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "logo": "logo-devlens.svg",
+    "name": "DevLens",
+    "description": "Powerful code search for GitHub.",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "logo": "logo-speed-boost.svg",
+    "name": "Translatly",
+    "description": "Translate text instantly on any page.",
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "logo": "logo-viewport-buddy.svg",
+    "name": "Viewport Buddy",
+    "description": "Block all ads and trackers automatically.",
+    "isActive": false
+  },
+  {
+    "id": 4,
+    "logo": "logo-style-spy.svg",
+    "name": "NotionBoost",
+    "description": "Supercharge your Notion productivity.",
+    "isActive": false
+  }
+]

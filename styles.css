@@ -1,0 +1,180 @@
+/* ==== GLOBAL RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* ==== APP CONTAINER ==== */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==== HEADER SECTION ==== */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* ==== FILTER BUTTONS ==== */
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background-color: #334155;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #64748b;
+}
+
+/* ==== EXTENSION GRID ==== */
+.extensions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ==== EXTENSION CARD ==== */
+.extension-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.extension-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ==== LOGO ==== */
+.extension-logo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+/* ==== TEXT ==== */
+.extension-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.extension-description {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 1.2rem;
+}
+
+/* ==== TOGGLE BUTTON ==== */
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 999px;
+  background-color: #475569;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-btn.active {
+  background-color: #22c55e;
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: #64748b;
+}
+
+/* ==== REMOVE BUTTON ==== */
+.remove-btn {
+  margin-top: 1rem;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #dc2626;
+}
+.switch-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #94a3b8;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #22c55e;
+}
+
+input:checked + .slider::before {
+  transform: translateX(18px);
+}
